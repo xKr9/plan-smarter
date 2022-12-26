@@ -9,7 +9,7 @@ export default class ItineraryApiClient {
     }
 
     async getItineraries () {
-        const result = await this.http.get('/')
+        const result = await this.http.get('/test')
         return result.data
     }
 }

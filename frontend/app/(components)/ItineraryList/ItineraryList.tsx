@@ -7,11 +7,10 @@ async function getServerSideProps () {
 }
 
 export default async function ItineraryList() {
-  const itineraries = getServerSideProps()
-  console.log(itineraries)
+  const itineraries = await getServerSideProps()
   return (
     <div>
-        <h1>heyy</h1>
+        {JSON.stringify(itineraries)}
     </div>
   )
 }

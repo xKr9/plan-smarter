@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('itineraries', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->on('users')->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->string('country');
             $table->string('title');
             $table->timestamps();
